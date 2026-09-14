@@ -50,6 +50,8 @@ async def main() -> None:
                     print(block.text)
         elif isinstance(message, ResultMessage):
             print(f"--- done ({message.subtype}) ---")
+            print(f"cost: ${message.total_cost_usd:.6f}")
+            print(f"usage: {message.usage}")
 
 
 if __name__ == "__main__":
